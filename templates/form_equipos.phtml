@@ -1,0 +1,19 @@
+
+<!-- formulario de equipos -->
+<section id="equipos-form">
+<form action="agregarequipos" method="POST" enctype="multipart/form-data" class="my-4">
+
+    <div class="form-group">
+        <label>Equipo</label>
+        <input required name="equipo" type="text" class="form-control">
+        <label>Liga</label>
+        <input required name="liga" type="text" class="form-control">
+        <label>País</label>
+        <input required name="pais" type="text" class="form-control">     
+        <label>Imagen del equipo</label>
+        <input required name="imagen" type="file" accept="image/*" class="form-control">
+
+        <button type="submit" class="btn btn-primary mt-2">Guardar</button>
+    </div>
+</form>
+</section>

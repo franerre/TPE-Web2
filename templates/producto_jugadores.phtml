@@ -1,0 +1,20 @@
+<?php require 'templates/layout/header.phtml' ?>
+
+<h1>Jugadores del fútbol europeo</h1>
+<div class="container-jugadores">
+<?php foreach ($jugadores as $jugador) : ?>
+    <div class="card">
+    <div class="jugador-info">
+    <img src="imagenes/jugadores/<?= $jugador->imagen_jugador ?>" alt="<?= $jugador->imagen_jugador ?>">
+        <h2 ><?= $jugador->nombre . ' ' . $jugador->apellido ?></h2>
+        <div class="btn-vermas">
+        <a href="verequipos/<?= $jugador->id_equipo ?>" class="d-flex justify-content-center btn btn-outline-primary">Ver más</a>
+        </div>
+        </div>
+    </div>
+<?php endforeach ?>
+</div>
+
+<p><small>Mostrando <?= $count ?> jugadores</small></p>
+
+<?php require 'templates/layout/footer.phtml' ?>

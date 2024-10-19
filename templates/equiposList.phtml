@@ -1,0 +1,28 @@
+<?php require 'templates/layout/header.phtml' ?>
+<?php require 'templates/form_equipos.phtml' ?>
+
+
+
+<h1>Equipos del fútbol europeo</h1>
+    <div class="container-jugadores">
+    <?php foreach ($equipos as $equipo) : ?>
+        
+    <div class="card">
+    
+        <div class="jugador-info">
+        <img src="imagenes/equipos/<?= $equipo->imagen ?>" alt="<?= $equipo->equipo ?>">
+            <h2><?= $equipo->equipo . ' ' . $equipo->liga . ' ' . $equipo->pais ?></h2>
+        </div>
+        
+        <a href="eliminarequipo/<?= $equipo->id ?>" class="delete-button">Borrar</a>
+        
+        <a href="editarEquipos/<?= $equipo->id ?>" class="edit-button">Editar</a>
+        
+
+
+    </div>
+<?php endforeach ?>
+
+    </div>
+    <p class="contador-jugadores-equipos"><small>Mostrando <?= $count ?> Equipos</small></p>
+<?php require 'templates/layout/footer.phtml' ?>
