@@ -1,0 +1,18 @@
+<!--formulario para editar equipos-->
+<section id="equipos-form">
+    <form action="actualizarEqui" method="POST" enctype="multipart/form-data" class="my-4">
+        <input type="hidden" name="id" value="<?= $equipo->id ?>">
+        <input type="hidden" name="imagen_actual" value="<?= $equipo->imagen ?>"> 
+        <div class="form-group">
+            <label>Equipo</label>
+            <input required name="equipo" type="text" class="form-control" value="<?= $equipo->equipo ?>">
+            <label>Liga</label>
+            <input required name="liga" type="text" class="form-control" value="<?= $equipo->liga ?>">
+            <label>País</label>
+            <input required name="pais" type="text" class="form-control" value="<?= $equipo->pais ?>">
+            <label>Imagen del equipo</label>
+            <input name="imagen" type="file" accept="image/*" class="form-control"> 
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Guardar Cambios</button>
+    </form>
+</section>

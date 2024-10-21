@@ -1,0 +1,24 @@
+<!-- formulario de jugadores -->
+<form action="agregar" method="POST" class="my-4">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input required name="nombre" type="text" class="form-control">
+        <label>Apellido</label>
+        <input required name="apellido" type="text" class="form-control">
+
+        <label>Equipo</label>
+        <select required name="id_equipo" class="form-control">
+            <?php foreach ($equipos as $id => $nombre) : ?>
+                
+                
+                <option value="<?= $id ?>"><?= $nombre->equipo?></option>
+
+            <?php endforeach ?>
+        </select>
+
+        <label>Imagen del jugador</label>
+        <input required name="imagen_jugador" type="file" accept="image/*" class="form-control">
+
+        <button type="submit" class="btn btn-primary mt-2">Guardar</button>
+    </div>
+</form>

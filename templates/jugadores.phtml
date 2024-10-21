@@ -1,0 +1,16 @@
+<?php require './templates/layout/header.phtml';?>
+
+
+    <div class="container-jugadores">
+    <h1>jugadores del fútbol europeo</h1>
+    <?php foreach ($jugadores as $jugador) : ?>
+    <div class="card">
+        <div class="jugador-info">
+            <h2><?= $jugador->nombre . ' ' . $jugador->apellido  ?></h2>
+        </div>
+    </div>
+<?php endforeach ?>
+    <a href="equiposini" class="btn btn-primary">Volver</a>
+
+    </div>
+    <?php require 'templates/layout/footer.phtml' ?>

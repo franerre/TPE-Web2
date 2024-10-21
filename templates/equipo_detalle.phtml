@@ -1,0 +1,17 @@
+<?php require 'templates/layout/header.phtml'; ?>
+
+<h1>Detalles del Equipo</h1>
+<div class="equipo-detalle">
+    <div class="card">
+  
+        <h2>Equipo: <?= $equipo->equipo ?></h2>
+        <p>Liga: <?= $equipo->liga ?></p>
+        <p>País: <?= $equipo->pais ?></p>
+
+    </div>
+</div>
+
+<a href="jugadoresini" class="btn btn-primary">Volver a jugadores</a>
+
+<?php require 'templates/layout/footer.phtml'; ?>
+

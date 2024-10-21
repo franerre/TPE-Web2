@@ -1,0 +1,24 @@
+<?php require 'templates/layout/header.phtml' ?>
+<?php require 'templates/form_jugadores.phtml' ?>
+
+<h1>jugadores del fútbol europeo</h1>
+<div class="container-jugadores">
+    <?php foreach ($jugadores as $jugador) : ?>
+        <div class="card">
+        <div class="jugador-info">
+        <img src="imagenes/jugadores/<?= $jugador->imagen_jugador ?>" alt="<?= $jugador->imagen_jugador ?>">
+        <h2 ><?= $jugador->nombre . ' ' . $jugador->apellido . ' ' . $equipos[$jugador->id_equipo]->equipo ?></h2>
+        </div>
+            
+            <a href="eliminar/<?= $jugador->id ?>" class="delete-button">Borrar</a>
+            <a href="editar/<?= $jugador->id ?>" class="edit-button">Editar</a>
+        </div>
+    <?php endforeach ?>
+</div>
+
+<p class="contador-jugadores-equipos"><small>Mostrando <?= $count ?> jugadores</small></p>
+
+<?php require 'templates/layout/footer.phtml' ?>
+
+
+

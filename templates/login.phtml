@@ -1,0 +1,24 @@
+<?php require 'templates/layout/header.phtml' ?>
+
+<div class="login-box">
+    <form method="POST" action="auth">
+        <div class="user-box">
+            <label >Usuario</label>
+            <input type="text" required class="form-control" id="usuario" name="usuario" >
+        </div>
+        <div class="user-box">
+            <label for="password">Password</label>
+            <input type="password" required class="form-control" id="password" name="password">
+        </div>
+
+        <?php if ($error) : ?>
+            <div class='alert alert-danger' role='alert'>
+                <?= $error ?>
+            </div> 
+        <?php endif ?>
+       
+        <button type="submit" >Entrar</button>
+    </form>
+</div>
+
+<?php require 'templates/layout/footer.phtml' ?>
