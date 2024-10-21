@@ -78,7 +78,7 @@ nav {
     background: transparent;
 }
 
-/* Estilos para los marcadores (placeholders) */
+/* marcadores (placeholders) */
 .login-box .user-box input::placeholder {
     color: #fff; 
     opacity: 0.7; 
@@ -217,7 +217,7 @@ nav {
     font-weight: bold;
 }
 
-/* Estilo para los campos de entrada "Nombre" y "Apellido" */
+/* campos de entrada "Nombre" y "Apellido" */
 .form-group input[type="text"] {
     
     width: 95%; 
@@ -235,7 +235,7 @@ nav {
 
 
 
-/* Estilos para la tarjeta de jugadores */
+/* tarjeta de jugadores */
 .container-jugadores {
   margin: 0 auto;
   width: 90%; 

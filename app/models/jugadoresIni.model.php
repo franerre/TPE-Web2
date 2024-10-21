@@ -17,7 +17,7 @@ class JugadoresIniModel {
         $consulta->execute();
 
        
-        $equipos = $consulta->fetchAll(PDO::FETCH_OBJ); // devuelve un arreglo de objetos
+        $equipos = $consulta->fetchAll(PDO::FETCH_OBJ); 
         
         return $equipos;
     }
@@ -29,7 +29,7 @@ class JugadoresIniModel {
         $consulta->execute();
 
       
-        $jugadores = $consulta->fetchAll(PDO::FETCH_OBJ); // devuelve un arreglo de objetos
+        $jugadores = $consulta->fetchAll(PDO::FETCH_OBJ); 
         
         return $jugadores;
     }

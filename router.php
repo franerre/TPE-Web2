@@ -89,29 +89,28 @@ switch ($params[0]) {
         $controller = new AuthController();
         $controller->logout();
         break;
-        case 'editar':
-            $controller = new JugadoresController();
-            $controller->editJugadores($params[1]);
-            break;
-        case 'actualizar':
-            $controller = new JugadoresController();
-            $controller->updateJugadores($params[1]);
-            break;
-        case 'actualizarequipos':
-            $controller = new EquiposController();
-            $controller->updateEquipos();
-            break;
-
-        case 'editarEquipos':
-            $controller = new EquiposController();
-            $controller->editEquipos($params[1]);
-            break;
-        case 'actualizarEqui':
-            $controller = new EquiposController();
-            $controller->updateEquipos($params[1]);
-            break;
-            
-            
+    case 'editar':
+        $controller = new JugadoresController();
+        $controller->editJugadores($params[1]);
+        break;
+    case 'actualizar':
+        $controller = new JugadoresController();
+        $controller->updateJugadores($params[1]);
+        break;
+    case 'actualizarequipos':
+        $controller = new EquiposController();
+        $controller->updateEquipos();
+        break;
+    case 'editarEquipos':
+        $controller = new EquiposController();
+        $controller->editEquipos($params[1]);
+        break;
+    case 'actualizarEqui':
+        $controller = new EquiposController();
+        $controller->updateEquipos($params[1]);
+        break;
+        
+        
     default: 
         echo "404 Page Not Found";
         break;

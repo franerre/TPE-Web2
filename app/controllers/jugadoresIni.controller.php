@@ -24,12 +24,8 @@ class JugadoresIniController {
             $equipo = $this->model->getEquipoById($id_equipo);  
             if ($equipo) {
                 $this->view->showEquipo($equipo);  
-            } else {
-                echo "Equipo no encontrado.";
-            }
-        } else {
-            echo "ID de equipo no válido.";
-        }
+            } 
+        } 
     }
     
     
